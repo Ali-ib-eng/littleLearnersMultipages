@@ -8,6 +8,8 @@
   margin-inline: auto;
   text-align: center;
   color: #262626;
+  padding: 10px 0;
+  
 }
 
 .badge {
@@ -28,6 +30,7 @@ line-height: 150%;
 text-align: center;
 color:#333333;
 background-color: #ffffff;
+
 
 }
 

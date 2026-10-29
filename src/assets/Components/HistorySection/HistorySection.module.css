@@ -4,6 +4,7 @@
   gap: 64px;
   max-width: 1280px;
   margin-inline: auto;
+  padding: 80px clamp(16px, 8vw, 162px);
   background-color: var(--bgforallProject);
 }
 
@@ -16,7 +17,7 @@
 }
 
 .list {
-  --gap: 60px; /* المسافة بين السنوات (يستخدمها الخط العمودي أيضًا) */
+  --gap: 60px;
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -28,7 +29,7 @@
 @media (max-width: 992px) {
   .section {
     gap: 48px;
-    padding: 56px 24px;
+    padding: 10px 50px;
   }
 
   .list {
@@ -37,8 +38,11 @@
 }
 
 @media (max-width: 768px) {
+  .section{
+    padding: 10px 20px;
+  }
   .card {
-    padding: 28px 20px;
+    padding: 10px 20px;
     box-shadow: 4px 4px 0 #262626;
   }
 

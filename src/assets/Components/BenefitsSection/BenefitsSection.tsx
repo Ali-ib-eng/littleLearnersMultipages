@@ -9,8 +9,8 @@ const BenefitsSection = ({ header, benefits }: BenefitsSectionProps) => {
       <SectionHeader {...header} />
 
       <div className={styles.grid}>
-        {benefits.map(({id,...benefit }) => (
-          <BenefitCard key={id} {...benefit} />
+        {benefits.map(({...benefit },i) => (
+          <BenefitCard key={i} {...benefit} />
         ))}
       </div>
     </section>

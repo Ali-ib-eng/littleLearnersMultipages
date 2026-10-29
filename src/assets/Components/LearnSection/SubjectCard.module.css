@@ -16,7 +16,6 @@
   text-align: center;
 }
 
-/* غلاف الصورة: يحمل اللسانين العلوي والسفلي */
 .media {
   position: relative;
   width: 100%;
@@ -39,7 +38,7 @@
 .media::before {
   top: calc(-1 * var(--tab-top));
   height: var(--tab-top);
-  border-top: 0;      /* يلتصق بحد البطاقة العلوي */
+  border-top: 0;     
 }
 
 .media::after {
@@ -54,7 +53,9 @@
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  
   border: 2px solid #262626;
+ 
   border-radius: 6px;
   object-fit: cover;
 }

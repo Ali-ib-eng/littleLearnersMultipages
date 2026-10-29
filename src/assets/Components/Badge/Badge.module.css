@@ -1,11 +1,18 @@
 .badge {
   display: inline-block;
-  padding: 6px 14px;
-  border: 1.5px solid #262626;
+  padding: 8px 16px;
+  border: 2px solid #262626;
   border-radius: 6px;
   background-color: #ffffff;
   color: #262626;
-  font-size: clamp(0.7rem, 0.8vw, 0.875rem);
+  font-size: 1rem;
+  font-family: var(--font-primary);
   font-weight: 500;
   white-space: nowrap;
+
+
+line-height: 150%;
+
+text-align: center;
+
 }

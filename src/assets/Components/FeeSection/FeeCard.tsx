@@ -2,9 +2,9 @@ import type { CSSProperties } from "react";
 import styles from "./FeeCard.module.css";
 
 export interface FeeCardData {
-  title?: string;      // شريط العنوان (مثل Additional Services)
-  columns?: string[];  // صف العناوين (اختياري)
-  rows: string[][];    // الصفوف
+  title?: string;     
+  columns?: string[];
+  rows: string[][];
 }
 
 const FeeCard = ({ title, columns, rows }: FeeCardData) => {
@@ -19,8 +19,8 @@ const FeeCard = ({ title, columns, rows }: FeeCardData) => {
         <div className={styles.table}>
           {columns && (
             <div className={`${styles.row} ${styles.head}`} style={gridStyle}>
-              {columns.map((column) => (
-                <span key={column} className={styles.cell}>
+              {columns.map((column,index) => (
+                <span key={index} className={styles.cell}>
                   {column}
                 </span>
               ))}

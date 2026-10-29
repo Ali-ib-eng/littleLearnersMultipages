@@ -16,9 +16,9 @@
   height: 70px;
   margin: 0 0 30px;
   padding: 0 30px;
-  border: 1.5px solid #262626;
+  border: 2px solid #262626;
   border-radius: 10px;
-  background-color: #ffeee3;
+  background-color: #FFEFE5;
   font-family: var(--font-secodary);
   font-size: 26px;
   font-weight: 600;
@@ -43,14 +43,14 @@
 .head {
   box-sizing: border-box;
   height: 62px;
-  border: 1.5px solid #262626;
+  border: 2px solid #262626;
   border-radius: 10px;
-  background-color: #ffeee3;
+  background-color: #FFEFE5;
 }
 
 .body {
   overflow: hidden;
-  border: 1.5px solid #262626;
+  border: 2px solid #262626;
   border-radius: 10px;
   background-color: #fffcfa;
 }
@@ -60,7 +60,7 @@
 }
 
 .body .row + .row {
-  border-top: 1.5px solid #262626;
+  border-top: 2px solid #262626;
 }
 
 .cell {
@@ -74,7 +74,7 @@
 }
 
 .cell + .cell {
-  border-left: 1.5px solid #262626;
+  border-left: 2px solid #262626;
 }
 
 

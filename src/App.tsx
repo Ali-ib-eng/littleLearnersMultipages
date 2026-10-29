@@ -8,6 +8,7 @@ import Header from './assets/Components/Header/Header';
 import About from './assets/pages/About/About';
 import Academics from './assets/pages/Academics/Academics';
 import Admissions from './assets/pages/Admissions/Admissions';
+import Student from './assets/pages/Student/Student';
  const navItems :NavItem[]=[
         {
         link:"Home",
@@ -45,6 +46,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/academics" element={<Academics/>} />
         <Route path="/admission" element={<Admissions/>} />
+        <Route path="/student-life" element={<Student/>} />
   </Routes>
   
     </main>

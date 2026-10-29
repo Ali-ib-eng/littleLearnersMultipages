@@ -3,24 +3,24 @@
   flex-direction: column;
   gap: 64px;
   /*as hero padding*/
-  padding: 152px  0px 158px 0;
+  /*padding: 152px  0px 158px 0;
   padding-left: clamp(24px, 8.75vw, 168px);
-  padding-right: clamp(24px, 8.44vw, 162px);
+  padding-right: clamp(24px, 8.44vw, 162px);*/
   /*padding: 80px 48px;*/
+  padding: 80px clamp(16px, 8vw, 162px);
   background-color:var(--bgforallProject);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px 32px; /* صف 48 لأن الأيقونة تبرز للأعلى */
+  gap: 48px 32px;
 }
 
-/* ≤ 992px: عمودان */
 @media (max-width: 992px) {
   .section {
     gap: 56px;
-    padding: 56px 24px;
+    padding: 10px 50px;
   }
 
   .grid {
@@ -28,7 +28,14 @@
   }
 }
 
-/* ≤ 576px: عمود واحد كما في تصميم الموبايل */
+@media (max-width: 768px) {
+  .section {
+    gap: 48px;
+   padding: 10px 20px;
+  }
+
+  
+}
 @media (max-width: 576px) {
   .section {
     gap: 48px;

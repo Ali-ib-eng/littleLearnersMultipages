@@ -6,8 +6,9 @@
   width: 100%;
   /*max-width: calc(var(--content-max) + 2 * var(--page-gutter));*/
   margin-inline: auto;
-  padding-inline: var(--page-gutter);
-  background-color: var(--bgforallProject);
+  /*padding-inline: var(--page-gutter);
+  background-color: var(--bgforallProject);*/
+  padding: 80px clamp(16px, 8vw, 162px);
 }
 
 .cards {
@@ -20,20 +21,26 @@
   .section {
     gap: 48px;
     padding-block: 56px;
+    padding: 10px 50px;
   }
 
   .cards {
     gap: 48px;
   }
 }
-
+@media (max-width:768px) {
+  .section{
+    padding: 10px 20px;
+  }
+}
 @media (max-width: 576px) {
   .section {
     gap: 40px;
     padding-block: 40px;
+    
   }
 
-  .cards {
+  .cards{
     gap: 40px;
   }
 }

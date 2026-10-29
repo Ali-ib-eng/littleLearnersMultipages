@@ -4,22 +4,24 @@
   gap: 64px;
   box-sizing: border-box;
   width: 100%;
-  max-width: calc(var(--content-max) + 2 * var(--page-gutter));
+  /*max-width: calc(var(--content-max) + 2 * var(--page-gutter));*/
   margin-inline: auto;
-  padding-inline: var(--page-gutter);
+  /*padding-inline: var(--page-gutter);*/
+  padding: 80px clamp(16px, 8vw, 162px);
   background-color: var(--bgforallProject);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;                 /* المسافة بين البطاقات */
+  gap: 40px;
 }
 
 @media (max-width: 992px) {
   .section {
     gap: 48px;
     padding-block: 56px;
+    padding: 10px 50px;
   }
 
   .grid {
@@ -27,7 +29,11 @@
     gap: 28px;
   }
 }
-
+@media (max-width: 768px) {
+  .section{
+padding: 10px 20px;
+  }
+}
 @media (max-width: 576px) {
   .section {
     gap: 40px;

@@ -61,18 +61,29 @@
 .title {
   margin: 0;
   font-family: var(--font-secodary);
-  font-size: 32px;
-  font-weight: 600;
+  
+  
   line-height: 130%;
+  color: #1A1A1A;
+
+  
+font-weight: 700;
+font-style: Bold;
+font-size:1.5rem;
+
+line-height: 130%;
+
+
 }
 
 .description {
-  margin: 0;
-  color: #404040;
+  
+  
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 150%;
+  color: #4C4C4D;
 }
 @media (max-width: 992px) {
   .number {

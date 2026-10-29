@@ -4,16 +4,22 @@
   gap: 64px;
   max-width: 1280px;
   margin-inline: auto;
+  padding: 80px clamp(16px, 8vw, 162px);
   background-color: var(--bgforallProject);
 }
 
 @media (max-width: 992px) {
   .section {
     gap: 48px;
-    padding: 56px 24px;
+     padding: 10px 50px;
   }
 }
-
+@media (max-width: 768px) {
+  .section {
+    
+    padding: 10px 20px;
+  }
+}
 @media (max-width: 576px) {
   .section {
     gap: 40px;

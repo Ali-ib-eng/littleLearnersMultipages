@@ -6,7 +6,7 @@
   background: #fff;
   border: 1px solid #1a1a1a;
   border-radius: 12px;
-  box-shadow: 4px 4px 0 #1a1a1a; /* الظل الصلب يمين وأسفل الكرت */
+  box-shadow: 4px 4px 0 #1a1a1a;
 }
 
 .cardHeader {
@@ -17,25 +17,40 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 24px;
+  font-family: var(--font-secodary);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #1a1a1a;
+  color: #1A1A1A;
+font-style: Bold;
+line-height: 130%;
+
 }
 
 .icon {
-  width: 48px;
-  height: 48px;
+  width: 70.57967376708984px;
+height: 70px;
+
+opacity: 1;
+
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .description {
-  margin: 0;
-  font-size: 15px;
+ 
+  font-size: 1.25rem;
   line-height: 1.7;
   color: #1a1a1a;
+
+  font-family: var(--font-primary);
+font-weight: 500;
+font-style: Medium;
+
+
+line-height: 150%;
+
+
 }
 
 @media (max-width: 768px) {
