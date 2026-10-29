@@ -1,0 +1,146 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  box-sizing: border-box;
+  width: 100%;
+  
+  margin-inline: auto;
+  padding: 80px clamp(16px, 8vw, 162px);
+  background-color: var(--bgforallProject);
+}
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 24px;                 
+  padding: 104px 80px 80px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 0 #262626;
+}
+
+.socials {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.social {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:154px;
+  height: 74px;
+  border: 2px solid #262626;
+  border-radius: 8px;
+  background-color: #ffdecc;
+  color: #262626;
+  font-size: 28px;
+  transition: background-color 0.2s ease;
+}
+
+.social:hover {
+  background-color: #ffae80;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.submit{
+  grid-column: 1 / -1;
+  box-sizing: border-box;
+  height: 80px;
+  border: 2px solid #262626;
+  border-radius: 8px;
+  background-color: #FFAE80;
+  color: #262626;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit:hover {
+  background-color: #ff9d66;
+}
+
+@media (max-width: 992px) {
+  .section {
+    gap: 48px;
+    padding-block: 56px;
+    padding: 10px 50px;
+  }
+  .card {
+    padding: 96px 48px 48px;
+    box-shadow: 6px 6px 0 #262626;
+  }
+  .social {
+    width: 110px;
+    height: 56px;
+    font-size: 26px;
+  }
+  .form {
+    column-gap: 28px;
+    row-gap: 32px;
+  }
+  .submit {
+    height: 68px;
+  }
+}
+
+@media (max-width: 768px) {
+    .section{
+        padding: 10px 20px;
+    }
+  .card {
+    padding: 92px 36px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    gap: 40px;
+    padding-block: 40px;
+  }
+
+  .card {
+    padding: 80px 30px 30px;
+    box-shadow: 5px 5px 0 #262626;
+  }
+
+  .socials {
+    
+    gap: 12px;
+  }
+
+  .social {
+    width:60px;
+    height: 56px;
+    /*width: 77px;
+    height: 62px;*/
+    font-size: 26px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .submit {
+    height: 62px;
+    font-size: 18px;
+  }
+}
+

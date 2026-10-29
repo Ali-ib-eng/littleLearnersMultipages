@@ -1,80 +1,13 @@
-/*.section {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  max-width: 1280px;
-  margin-inline: auto;
-  /*padding: 152px  0px 150px 0;*/
-  /*padding-left: clamp(24px, 8.75vw, 168px);
-  padding-right: clamp(24px, 8.44vw, 162px);*/
-  
-  /*background-color: var(--bgforallProject);
-}*/
 
-/*.slider {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "prev cards next";
-  align-items: center;
-  column-gap: 32px;
-  
-}
-
-.cards {
-  grid-area: cards;
-  display: flex;
-  gap: 32px;
-  min-width: 0;
- 
-}
-
-.prev {
-  grid-area: prev;
-}
-
-.next {
-  grid-area: next;
-}
-
-/* 
-@media (max-width: 992px) {
-  .section {
-    gap: 48px;
-    padding: 56px 24px;
-    
-  }
-
-  .slider {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "cards cards"
-      "prev next";
-    row-gap: 32px;
-    column-gap: 12px;
-  }
-
-  .prev {
-    justify-self: end;
-  }
-
-  .next {
-    justify-self: start;
-  }
-}
-
-@media (max-width: 576px) {
-  .section {
-    gap: 40px;
-    padding: 40px 18px;
-  }
-}
-*/
 .section {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  max-width: 1280px;
-  margin-inline: auto;
+  /*max-width: 1280px;*/
+  /*margin-inline: auto;*/
+  /*padding: 80px 30px;*/
+  padding-left: clamp(24px, 8.75vw, 168px);
+  padding-right: clamp(24px, 8.44vw, 162px);
   background-color: var(--bgforallProject);
 }
 

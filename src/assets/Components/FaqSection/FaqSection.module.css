@@ -7,6 +7,8 @@
   padding: 150px  0px 150px 0;
   /*padding-left: clamp(24px, 8.75vw, 168px);
   padding-right: clamp(24px, 8.44vw, 162px);*/
+  padding-left: clamp(24px, 8.75vw, 168px);
+    padding-right: clamp(24px, 8.44vw, 162px);
 }
 .columns {
   display: grid;

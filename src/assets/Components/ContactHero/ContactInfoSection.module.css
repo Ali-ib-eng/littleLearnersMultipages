@@ -1,0 +1,147 @@
+
+.section {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 50px;
+  margin-inline: auto;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center; 
+  column-gap: 50px;
+  padding: 104px 80px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 0 #262626;
+  color: #262626;
+}
+
+.decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 137px;
+  height: auto;
+  pointer-events: none;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.title {
+  
+  font-family: var(--font-secodary);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 130%;
+  color: #1A1A1A;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.description {
+  
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #333333;
+}
+
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding-block: 56px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 24px;
+    padding: 72px 48px 56px;
+    text-align: center;
+    box-shadow: 6px 6px 0 #262626;
+  }
+
+  .decoration {
+    width: 110px;
+  }
+
+  .heading {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 600px;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section{
+    padding: 10px 20px;
+  }
+  .card {
+    padding: 64px 36px 48px;
+    box-shadow: 5px 5px 0 #262626;
+  }
+
+  .decoration {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding-block: 40px;
+   
+    padding-top: 16px;
+  
+  }
+
+  .card {
+    padding: 48px 30px 40px;
+    box-shadow: 4px 4px 0 #262626;
+  }
+
+  .decoration {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
