@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  /*as hero padding*/
+  padding: 152px  0px 158px 0;
+  padding-left: clamp(24px, 8.75vw, 168px);
+  padding-right: clamp(24px, 8.44vw, 162px);
+  /*padding: 80px 48px;*/
+  background-color:var(--bgforallProject);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px; /* صف 48 لأن الأيقونة تبرز للأعلى */
+}
+
+/* ≤ 992px: عمودان */
+@media (max-width: 992px) {
+  .section {
+    gap: 56px;
+    padding: 56px 24px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≤ 576px: عمود واحد كما في تصميم الموبايل */
+@media (max-width: 576px) {
+  .section {
+    gap: 48px;
+    padding: 40px 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

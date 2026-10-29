@@ -1,0 +1,63 @@
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  color: #262626;
+}
+
+.badge {
+  
+  /*padding: 6px 14px;
+  
+  background-color: #ffffff;
+  font-size: clamp(0.7rem, 0.8vw, 0.875rem);
+  font-weight: 500;*/
+  padding: 10px 20px;
+border: 2px solid #000000;
+  border-radius: 8px;
+  font-family: var(--font-primary);
+ font-weight: 500;
+ font-style: Medium;
+ font-size: clamp(0.7rem, 1vw, 0.875rem);
+line-height: 150%;
+text-align: center;
+color:#333333;
+background-color: #ffffff;
+
+}
+
+.title {
+  
+  font-size: clamp(1.75rem, 3.625vw, 3rem);
+  font-family: var(--font-secodary);
+font-weight: 700;
+font-style: bold;
+
+
+line-height: 130%;
+
+text-align: center;
+
+}
+
+.description {
+  
+  font-size: clamp(0.875rem, 1vw, 1.0625rem);
+  font-weight: 500;
+  line-height: 1.5;
+
+  font-family: var(--font-primary);
+
+font-style: Medium;
+
+
+
+
+text-align: center;
+
+}

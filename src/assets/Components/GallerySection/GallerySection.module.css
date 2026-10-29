@@ -1,0 +1,30 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(var(--content-max) + 2 * var(--page-gutter));
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+  background-color: var(--bgforallProject);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 7vw, 96px);
+}
+
+@media (max-width: 992px) {
+  .section {
+    gap: 40px;
+    padding-block: 56px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding-block: 40px;
+  }
+}

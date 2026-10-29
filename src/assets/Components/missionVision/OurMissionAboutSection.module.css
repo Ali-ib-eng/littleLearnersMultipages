@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(40px, 5vw, 80px);
+  width: 100%;
+  max-width: 1596px;
+  margin-inline: auto;
+  padding: 80px clamp(16px, 8vw, 162px);
+  box-sizing: border-box;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

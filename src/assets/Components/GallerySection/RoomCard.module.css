@@ -1,0 +1,86 @@
+.room {
+  --img-h: clamp(120px, 17vw, 242px); 
+  --pad: clamp(16px, 2vw, 30px);      
+  --overlap: calc(var(--img-h) / 2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.images {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: clamp(12px, 2.4vw, 32px);
+  padding-inline: var(--pad);
+  margin-bottom: calc(-1 * var(--overlap));
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: var(--img-h);
+  border: 2px solid #262626;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title arrows"
+    "desc  desc";
+  align-items: center;
+  row-gap: clamp(14px, 1.6vw, 24px);
+  padding: calc(var(--overlap) + var(--pad)) var(--pad) var(--pad);
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 0 #262626;
+  color: #262626;
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  font-family: var(--font-secodary);
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.arrows {
+  grid-area: arrows;
+  display: flex;
+  gap: 12px;
+}
+
+.description {
+  grid-area: desc;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(0.8125rem, 1vw, 1rem);
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  .room {
+    --img-h: clamp(170px, 58vw, 280px);
+    --pad: 20px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "arrows"
+      "title"
+      "desc";
+    justify-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 0 #262626;
+  }
+}

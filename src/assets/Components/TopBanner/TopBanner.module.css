@@ -1,0 +1,54 @@
+/* TopBanner.module.css */
+
+.topbanner{
+    margin: 14px 50px;
+    
+}
+.TopBannerText{
+    padding: 14px 0;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 150%;
+    color:#262626;
+    
+
+
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  /*padding-block: 12px;*/
+  
+  border: 2px solid #262626;
+  border-radius: 8px;
+  background-color:#FFDECC;
+  background-image: url("/img/bgbanner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-decoration: none;
+  
+}
+@media (max-width: 768px) {
+  .topbanner{
+    margin: 12px 20px;
+  }
+}
+@media screen and (max-width:576px){
+    .topbanner{
+        margin: 12px 20px;
+    }
+    .TopBannerText{
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: Medium;
+        line-height: 150%;
+    }
+    
+    
+}

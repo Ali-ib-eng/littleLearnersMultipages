@@ -1,0 +1,39 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  max-width: 1280px;
+  margin-inline: auto;
+  background-color: var(--bgforallProject);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 992px) {
+  .section {
+    gap: 48px;
+    padding: 56px 24px;
+  }
+
+  .grid {
+    gap: 24px;
+  }
+}
+
+/* ≤ 768px: عمود واحد */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    gap: 40px;
+    padding: 40px 18px;
+  }
+}

@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-family: var(--font-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #262626;
+  border-radius: 6px;
+  background-color: #fff4ee;
+  font-size: 0.8125rem;
+}

@@ -1,0 +1,11 @@
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1.5px solid #262626;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #262626;
+  font-size: clamp(0.7rem, 0.8vw, 0.875rem);
+  font-weight: 500;
+  white-space: nowrap;
+}

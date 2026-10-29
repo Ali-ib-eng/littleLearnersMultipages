@@ -1,0 +1,139 @@
+.section {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(1820px + 2 * var(--page-gutter)); /* عرض البطاقة في الفيغما */
+  margin-inline: auto;
+  padding: clamp(16px, 2.4vw, 46px) var(--page-gutter) 0;
+}
+
+.card {
+  /* القياسات من الفيغما (إطار 1920) محوّلة إلى نسب */
+  --pad-y: clamp(48px, 7.8vw, 150px);      /* 150px */
+  --pad-x: clamp(24px, 6.25vw, 120px);     /* 120px */
+  --col-gap: clamp(24px, 2.6vw, 50px);     /* 50px  */
+
+  position: relative;
+  overflow: hidden;                         /* يقصّ الزخرفة عند الزوايا المنحنية */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  column-gap: var(--col-gap);
+  min-height: clamp(0px, 25.3vw, 485px);   /* ارتفاع 485px */
+  padding: var(--pad-y) var(--pad-x);
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 0 #262626;
+  color: #262626;
+}
+
+.decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(72px, 10.4vw, 200px);
+  height: auto;
+  pointer-events: none;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 1.3vw, 25px);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-secodary);
+  font-size: clamp(1.75rem, 2.5vw, 3rem);  /* 48px */
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.description {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(0.875rem, 1.04vw, 1.25rem); /* 20px */
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* ≤ 992px: عمود واحد في المنتصف */
+@media (max-width: 992px) {
+  .card {
+    --pad-y: 56px;
+    --pad-x: 40px;
+
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 24px;
+    min-height: 0;
+    text-align: center;
+    box-shadow: 6px 6px 0 #262626;
+  }
+
+  .decoration {
+    width: 110px;
+  }
+
+  .heading {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    max-width: 640px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    --pad-y: 48px;
+    --pad-x: 32px;
+
+    row-gap: 20px;
+    box-shadow: 5px 5px 0 #262626;
+  }
+
+  .decoration {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* ≤ 576px: الموبايل (قياسات تقديرية من التصميم) */
+@media (max-width: 576px) {
+  .section {
+    padding-top: 16px;
+  }
+
+  .card {
+    --pad-y: 50px;
+    --pad-x: 28px;
+
+    row-gap: 16px;
+    box-shadow: 4px 4px 0 #262626;
+  }
+
+  .decoration {
+    width: 84px;
+  }
+
+  .title {
+    font-size: 1.75rem;   /* 28px */
+  }
+
+  .description {
+    font-size: 0.875rem;  /* 14px */
+  }
+}

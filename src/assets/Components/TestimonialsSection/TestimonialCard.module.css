@@ -1,0 +1,70 @@
+.card {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  /*padding: 32px 28px;*/
+  padding: 50px  ;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 6px 6px 0 #262626;
+  color: #262626;
+  text-align: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  
+  border: 1.5px solid #262626;
+  border-radius: 50%;
+  background-color: #ffefe5;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--font-primary);
+font-weight: 600;
+/*font-size: 24px;*/
+line-height: 150%;
+text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.stars {
+  padding: 15px 0;
+  display: flex;
+  gap: 6px;
+}
+
+.starOn {
+  color: #ff8d4d;
+}
+
+.starOff {
+  color: #e6e0db;
+}
+
+.text {
+  
+  font-size: 1.25rem;
+  line-height: 1.6;
+
+  font-family: var(--font-primary);
+font-weight: 500;
+font-style: Medium;
+/*font-size: 20px;*/
+line-height: 150%;
+
+
+}
+
+@media (max-width: 992px) {
+  .card {
+    padding: 28px 24px;
+  }
+}

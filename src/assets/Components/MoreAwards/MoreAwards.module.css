@@ -1,0 +1,8 @@
+.text {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: #262626;
+}

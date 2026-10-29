@@ -1,0 +1,39 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  box-sizing: border-box;
+  width: 100%;
+  /*max-width: calc(var(--content-max) + 2 * var(--page-gutter));*/
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+  background-color: var(--bgforallProject);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+@media (max-width: 992px) {
+  .section {
+    gap: 48px;
+    padding-block: 56px;
+  }
+
+  .cards {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    gap: 40px;
+    padding-block: 40px;
+  }
+
+  .cards {
+    gap: 40px;
+  }
+}

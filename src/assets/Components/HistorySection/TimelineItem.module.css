@@ -1,0 +1,155 @@
+.item {
+  --year-h: 104px;   
+  --ring: 14px;     
+  --node-w: 64px;    
+  --orange: #ff8d4d;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--node-w) auto 1fr;
+  grid-template-areas: "node year text";
+  align-items: start;
+}
+
+.item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--year-h) / 2);
+  left: calc(var(--ring) / 2 - 1px);
+  width: 2px;
+  height: calc(100% + var(--gap));
+  background-color: var(--orange);
+}
+
+.node {
+  grid-area: node;
+  display: flex;
+  align-items: center;
+  height: var(--year-h);
+}
+
+.ring {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--ring);
+  height: var(--ring);
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.connector {
+  flex: 1;
+  height: 2px;
+  background-color: var(--orange);
+}
+.year {
+  grid-area: year;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: var(--year-h);
+  padding: 0 clamp(16px, 1.9vw, 28px);
+  border: 2px solid #262626;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 0 #262626;
+}
+
+.dots {
+  width: clamp(28px, 2.6vw, 38px);
+  height: auto;
+}
+
+.yearText {
+  font-family: var(--font-primary);
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  font-weight: 700;
+  line-height: 130%;
+  color: #262626;
+}
+.text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--year-h);
+  margin-left: clamp(24px, 3.5vw, 48px);
+  color: #262626;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.description {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (max-width: 992px) {
+  .item {
+    --year-h: 88px;
+    --node-w: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    --year-h: 64px;
+    --ring: 12px;
+    --node-w: 40px;
+
+    grid-template-columns: var(--node-w) 1fr;
+    grid-template-areas:
+      "node year"
+      ".    text";
+  }
+
+  .year {
+    justify-self: start;
+    gap: 10px;
+    padding: 0 16px;
+    box-shadow: 3px 3px 0 #262626;
+  }
+
+  .yearText {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    min-height: 0;
+    margin-left: 0;
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .item {
+    --year-h: 56px;
+    --node-w: 32px;
+  }
+
+  .yearText {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8125rem;
+  }
+}

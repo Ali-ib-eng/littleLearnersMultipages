@@ -1,0 +1,185 @@
+.footer {
+  margin: 64px 48px 40px;
+  padding: 64px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color:#FFFFFF;
+  box-shadow: 8px 8px 0 #262626;
+  color: #262626;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 48px;
+  background-color:#FFFFFF;
+}
+
+.brand{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  align-self: flex-start;
+  height: 32px;
+  width: auto;
+}
+
+.description {
+  max-width: 320px;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  background-color:#FFFFFF;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*background-color:var(--bgforallProject);*/
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-block: 20px;
+  border-block: 1px solid #767676;
+}
+
+.legal {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-primary);
+  
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+
+
+}
+
+.legalItem {
+  padding-inline: 12px;
+}
+
+.legalItem:first-child {
+  padding-left: 0;
+}
+
+.legalItem:last-child {
+  padding-right: 0;
+}
+
+.legalItem + .legalItem {
+  border-left: 2px solid #262626;
+}
+
+.legalItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.legalItem a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #262626;
+  border-radius: 8px;
+  
+  color: #262626;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.social:hover {
+  background-color: #ffae80;
+}
+
+.copyright {
+  margin: 20px 0 0;
+  color: #656567;
+  font-family: var(--font-primary);
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .footer {
+    margin: 40px 24px 32px;
+    padding: 32px 24px;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .description {
+    max-width: none;
+    text-align: center;
+  }
+  .columns {
+    display: block;
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .columns > * {
+    margin-bottom: 32px;
+  }
+
+  .columns > :nth-child(3) {
+    break-before: column; /* العمود الثالث يبدأ العمود الثاني */
+  }
+
+  .bar {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0;
+  }
+
+  .legal {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    margin: 32px 18px 28px;
+  }
+}

@@ -1,0 +1,49 @@
+.cards {
+  grid-area: cards;
+  display: flex;
+  gap: 32px;
+  min-width: 0;
+}
+.sides {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "prev cards next";
+  align-items: center;
+  column-gap: 32px;
+}
+
+.prev { grid-area: prev; }
+.next { grid-area: next; }
+
+/* ===== variant: bottom (Awards) ===== */
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrows {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+@media (max-width: 992px) {
+  .sides {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "cards cards"
+      "prev next";
+    row-gap: 32px;
+    column-gap: 12px;
+  }
+
+  .prev { justify-self: end; }
+  .next { justify-self: start; }
+}
