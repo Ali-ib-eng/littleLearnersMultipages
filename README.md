@@ -4,7 +4,7 @@
 
 [**Live Demo**](https://ali-ib-eng.github.io/YOUR-REPO/) · [**Figma Design**](#) · [**Author**](#-author)
 
-<!-- Add a screenshot: ![Preview](./preview.png) -->
+<!-->
 
 ---
 
@@ -52,8 +52,8 @@ src/
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/Ali-ib-eng/YOUR-REPO.git
-cd YOUR-REPO
+git clone https://github.com/Ali-ib-eng/littleLearnersMultipages.git
+cd littleLearnersMultipages
 npm install
 npm run dev
 ```
